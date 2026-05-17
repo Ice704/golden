@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="card">
+    <view class="title">附近可接订单</view>
+    <view class="muted">系统默认展示距离门店 {{maxDistanceKm}}km 内的待接订单。</view>
+  </view>
+
+  <block wx:for="{{orders}}" wx:key="id">
+    <view class="card">
+      <view class="row">
+        <text>{{item.storeName}}</text>
+        <text class="muted">{{item.distanceKm}}km</text>
+      </view>
+      <view class="muted" style="margin-top: 16rpx;">{{item.itemsText}}</view>
+      <view class="row">
+        <text>代购金额</text>
+        <text>¥{{item.pricing.proxyAmount}}</text>
+      </view>
+      <view class="row">
+        <text>平台服务费</text>
+        <text>¥{{item.pricing.serviceFee}}</text>
+      </view>
+      <view class="row">
+        <text>顾客预计支付</text>
+        <text class="amount">¥{{item.pricing.total}}</text>
+      </view>
+      <button class="primary-button" data-id="{{item.id}}" bindtap="acceptOrder">立即接单</button>
+    </view>
+  </block>
+
+  <view wx:if="{{!orders.length}}" class="card muted">暂无符合距离条件的订单。</view>
+</view>

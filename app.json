@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/customer/index",
+    "pages/shopper/index",
+    "pages/mine/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "山姆代购",
+    "navigationBarBackgroundColor": "#0b4a6f",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f6f8fb"
+  },
+  "tabBar": {
+    "color": "#64748b",
+    "selectedColor": "#0b4a6f",
+    "list": [
+      {
+        "pagePath": "pages/customer/index",
+        "text": "下单"
+      },
+      {
+        "pagePath": "pages/shopper/index",
+        "text": "接单"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

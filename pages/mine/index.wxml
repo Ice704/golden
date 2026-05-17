@@ -1,0 +1,17 @@
+<view class="container">
+  <view class="card">
+    <view class="title">我的</view>
+    <view class="muted">可在这里切换顾客/代购身份、查看订单与结算。</view>
+  </view>
+
+  <view class="card">
+    <view class="row">
+      <text>平台服务费比例</text>
+      <text>10%</text>
+    </view>
+    <view class="row">
+      <text>默认接单距离</text>
+      <text>{{maxDistanceKm}}km</text>
+    </view>
+  </view>
+</view>
