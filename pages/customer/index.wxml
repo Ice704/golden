@@ -1,0 +1,44 @@
+<view class="container">
+  <view class="card">
+    <view class="title">发布山姆代购订单</view>
+    <view class="muted">平台按代购金额收取 10% 服务费，提交前会自动计算总价。</view>
+  </view>
+
+  <view class="card">
+    <view>山姆门店</view>
+    <input class="input" placeholder="例如：山姆会员店深圳福田店" value="{{storeName}}" bindinput="onStoreNameInput" />
+
+    <view style="margin-top: 24rpx;">商品清单</view>
+    <textarea class="textarea" placeholder="请填写商品名称、规格、数量，可附备选方案" value="{{itemsText}}" bindinput="onItemsInput" />
+
+    <view style="margin-top: 24rpx;">预估代购金额（元）</view>
+    <input class="input" type="digit" placeholder="例如：300" value="{{proxyAmount}}" bindinput="onProxyAmountInput" />
+
+    <view style="margin-top: 24rpx;">配送费（元）</view>
+    <input class="input" type="digit" value="{{deliveryFee}}" bindinput="onDeliveryFeeInput" />
+
+    <view style="margin-top: 24rpx;">收货地址</view>
+    <textarea class="textarea" placeholder="请填写详细地址、联系人、手机号" value="{{address}}" bindinput="onAddressInput" />
+  </view>
+
+  <view class="card">
+    <view class="row">
+      <text>代购金额</text>
+      <text>¥{{pricing.proxyAmount}}</text>
+    </view>
+    <view class="row">
+      <text>服务费（10%）</text>
+      <text>¥{{pricing.serviceFee}}</text>
+    </view>
+    <view class="row">
+      <text>配送费</text>
+      <text>¥{{pricing.deliveryFee}}</text>
+    </view>
+    <view class="row">
+      <text>预计支付</text>
+      <text class="amount">¥{{pricing.total}}</text>
+    </view>
+  </view>
+
+  <button class="primary-button" bindtap="submitOrder">提交订单</button>
+</view>

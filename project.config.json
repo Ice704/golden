@@ -1,0 +1,14 @@
+{
+  "description": "山姆代购小程序 MVP",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "appid": "touristappid",
+  "projectname": "sam-club-proxy-miniapp"
+}
