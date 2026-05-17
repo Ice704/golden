@@ -40,5 +40,5 @@
     </view>
   </view>
 
-  <button class="primary-button" bindtap="submitOrder">提交订单</button>
+  <button class="primary-button" loading="{{submitting}}" disabled="{{submitting}}" bindtap="submitOrder">提交订单</button>
 </view>
