@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+cache/
+*.log
+positions.json
+orders_*.csv
+chan_orders_*.csv
+equity_*.csv
+trades_*.csv
